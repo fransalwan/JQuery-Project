@@ -1,0 +1,22 @@
+[
+  {
+    "CuisineId": 1,
+    "CustomerId": 1
+  },
+  {
+    "CuisineId": 2,
+    "CustomerId": 1
+  },
+  {
+    "CuisineId": 3,
+    "CustomerId": 1
+  },
+  {
+    "CuisineId": 2,
+    "CustomerId": 2
+  },
+  {
+    "CuisineId": 3,
+    "CustomerId": 2
+  }
+]

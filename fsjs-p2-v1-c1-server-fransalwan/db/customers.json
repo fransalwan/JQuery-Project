@@ -1,0 +1,16 @@
+[
+  {
+    "username": "fransalwan",
+    "email": "alwan@gmail.com",
+    "password": "123456",
+    "role": "customer",
+    "isSubscribed": false
+  },
+  {
+    "username": "fransalwan2",
+    "email": "alwan2@gmail.com",
+    "password": "123456",
+    "role": "customer",
+    "isSubscribed": true
+  }
+]

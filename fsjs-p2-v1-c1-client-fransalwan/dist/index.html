@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="IDEA Admin Panel" />
+    <meta name="author" content="Ziady Mubaraq" />
+    <link
+      href="./image/IDEA_logo.svg"
+      type="image/x-icon"
+      rel="shortcut icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,0,0"
+      rel="stylesheet"
+    />
+    <link href="./css/style.css" rel="stylesheet" />
+    <title>IDEA - Admin Panel</title>
+    <script src="https://accounts.google.com/gsi/client" async></script>
+  </head>
+
+  <body>
+    <!-- Preloader -->
+    <div id="preloader" style="display: none">
+      <div class="loading">
+        <lottie-player
+          src="https://assets2.lottiefiles.com/packages/lf20_remmdtqv.json"
+          background="transparent"
+          speed="1"
+          style="width: 300px; height: 300px"
+          loop
+          autoplay
+        ></lottie-player>
+      </div>
+    </div>
+    <!-- End Preloader -->
+
+    <!-- Navbar -->
+    <header
+      class="navbar sticky-top bg-white flex-md-nowrap p-0 shadow"
+      id="navbar"
+    >
+      <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6">
+        <img
+          src="./image/IDEA_logo.svg"
+          width="80"
+          class="d-inline-block me-2"
+          alt="IDEA"
+        />Admin Panel</a
+      >
+      <button
+        class="navbar-toggler position-absolute d-md-none collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#sidebar-menu"
+        aria-controls="sidebar-menu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </header>
+    <!-- End Navbar -->
+
+    <!-- Login Section -->
+    <section class="container" id="login-section">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1 class="mb-3 mt-5">Login Options</h1>
+          <span
+            >Log in and autocomplete your order with your personal data, or sign
+            up to enjoy all the benefits of an IDEA account.</span
+          >
+        </div>
+        <div class="col-12 col-lg-8 offset-lg-2 my-5">
+          <div class="row">
+            <div class="col-12 col-md-6 border-end p-5 text-left">
+              <div class="form-signin m-auto">
+                <form id="register-form">
+                  <h1 class="h3 mb-3 display-1">Sign up and enjoy</h1>
+                  <div class="mb-3">
+                    <div class="d-flex justify-content-between">
+                      <label for="register-username">Username</label>
+                      <label class="text-danger text-end fw-bold">*</label>
+                    </div>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="register-username"
+                      placeholder="Enter your username ..."
+                      autocomplete="off"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <div class="d-flex justify-content-between">
+                      <label for="register-email">Email</label>
+                      <label class="text-danger text-end fw-bold">*</label>
+                    </div>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="register-email"
+                      placeholder="Enter email address ..."
+                      autocomplete="off"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <div class="d-flex justify-content-between">
+                      <label for="register-password">Password</label>
+                      <label class="text-danger text-end fw-bold">*</label>
+                    </div>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="register-password"
+                      placeholder="Enter your password ..."
+                      autocomplete="off"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="register-phone">Phone Number</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="register-phone"
+                      placeholder="Enter phone number (optional) ..."
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="register-address">Address</label>
+                    <textarea
+                      id="register-address"
+                      class="form-control"
+                      rows="3"
+                      placeholder="Enter your address (optional) ..."
+                      autocomplete="off"
+                    ></textarea>
+                  </div>
+                  <button
+                    class="btn btn-lg btn-primary rounded-pill w-100 p-2 mt-3"
+                    type="submit"
+                  >
+                    Sign Up
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 p-5 text-left">
+              <div class="form-signin m-auto">
+                <form id="login-form">
+                  <h1 class="h3 mb-3 display-1">Log in to your account</h1>
+                  <span
+                    >Log in on your profile to autocomplete your purchase order
+                    with your personal data.</span
+                  >
+                  <div class="mb-3 mt-3">
+                    <div class="d-flex justify-content-between">
+                      <label for="login-email">Email</label>
+                      <label class="text-danger text-end fw-bold">*</label>
+                    </div>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="login-email"
+                      placeholder="Enter email address ..."
+                      autocomplete="off"
+                      required
+                    />
+                  </div>
+                  <div class="mb-4">
+                    <div class="d-flex justify-content-between">
+                      <label for="login-password">Password</label>
+                      <label class="text-danger text-end fw-bold">*</label>
+                    </div>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="login-password"
+                      placeholder="Enter your password ..."
+                      autocomplete="off"
+                      required
+                    />
+                  </div>
+                  <div class="checkbox mb-3">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="login-remember"
+                      />
+                      <label class="form-check-label" for="login-remember">
+                        Remember me
+                      </label>
+                    </div>
+                  </div>
+                  <button
+                    class="btn btn-lg btn-primary rounded-pill w-100 p-2"
+                    type="submit"
+                  >
+                    Log In
+                  </button>
+                </form>
+                <p class="text-center">Or</p>
+                <center>
+                  <div id="buttonDiv"></div>
+                </center>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Login Section -->
+
+    <!-- Home Section -->
+    <section class="container-fluid" id="home-section">
+      <div class="row">
+        <!-- Sidebar -->
+        <nav
+          class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse"
+          id="sidebar-menu"
+        >
+          <div class="position-sticky pt-3">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active fw-bold" href="" id="nav-dashboard">
+                  <span class="icon material-symbols-outlined me-2"
+                    >shopping_cart</span
+                  >Dashboard</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="" id="nav-product">
+                  <span class="icon material-symbols-outlined me-2"
+                    >shopping_bag</span
+                  >Products</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="" id="nav-category">
+                  <span class="icon material-symbols-outlined me-2"
+                    >category</span
+                  >Categories</a
+                >
+              </li>
+            </ul>
+            <h6
+              class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase"
+            >
+              <span>Account</span>
+            </h6>
+            <ul class="nav flex-column mb-2">
+              <li class="nav-item">
+                <a class="nav-link">
+                  <span class="icon material-symbols-outlined me-2">person</span
+                  >Hej, <span id="username">Ziady!</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="" id="nav-logout">
+                  <span class="icon material-symbols-outlined me-2">logout</span
+                  >Logout</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- End Sidebar -->
+
+        <!-- Dashboard Section -->
+        <section
+          class="col-md-9 ms-sm-auto col-lg-10 px-md-4"
+          id="dashboard-section"
+        >
+          <div
+            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+          >
+            <h1 class="display-2">Dashboard</h1>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="row">
+                <div class="col-12 col-md-6 mb-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <h6 class="card-subtitle mb-2 text-muted">
+                        Total Products
+                      </h6>
+                      <h6 class="card-title card-number" id="total-product">
+                        0
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 mb-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <h6 class="card-subtitle mb-2 text-muted">
+                        Total Categories
+                      </h6>
+                      <h6 class="card-title card-number" id="total-category">
+                        0
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End Dashboard Section -->
+
+        <!-- Product Section -->
+        <section
+          class="col-md-9 ms-sm-auto col-lg-10 px-md-4"
+          id="product-section"
+        >
+          <div
+            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+          >
+            <h1 class="display-2">Products</h1>
+            <button class="btn btn-primary rounded-pill" id="new-product">
+              <span class="icon material-symbols-outlined">add</span>New Product
+            </button>
+          </div>
+          <div class="row">
+            <div class="col-12 table-responsive">
+              <table class="table align-middle">
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Image</th>
+                    <th scope="col" width="180px">Name</th>
+                    <th scope="col" width="250px">Description</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Action</th>
+                    <th scope="col" width="50px"></th>
+                  </tr>
+                </thead>
+                <tbody id="table-product">
+                  <!-- Masukin data di sini -->
+                  <tr>
+                    <td scope="row">#1</td>
+                    <td class="fw-bold">MILLBERGET</td>
+                    <td>
+                      <img
+                        src="https://d2xjmi1k71iy2m.cloudfront.net/dairyfarm/id/images/201/1020142_PE831799_S4.jpg"
+                        class="img-fluid"
+                      />
+                    </td>
+                    <td>Swivel chair, murum black</td>
+                    <td>13</td>
+                    <td class="fw-bold">Rp1.599.000</td>
+                    <td>ziady.mubaraq@gmail.com</td>
+                    <td>
+                      <a href="" class="ms-3"
+                        ><span
+                          class="icon material-symbols-outlined text-danger"
+                          >delete</span
+                        ></a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+        <!-- End Product Section -->
+
+        <!-- New Product Section -->
+        <section
+          class="col-md-9 ms-sm-auto col-lg-10 px-md-4"
+          id="new-product-section"
+        >
+          <div
+            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+          >
+            <h1 class="display-2">New Product</h1>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <form id="product-form">
+                <div class="mb-3">
+                  <label for="product-name"
+                    >Name <span class="text-danger fw-bold">*</span></label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="product-name"
+                    placeholder="Enter product name"
+                    autocomplete="off"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="product-desc"
+                    >Description
+                    <span class="text-danger fw-bold">*</span></label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="product-desc"
+                    placeholder="Enter product description"
+                    autocomplete="off"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="product-category"
+                    >Category <span class="text-danger fw-bold">*</span></label
+                  >
+                  <select id="product-category" class="form-select" required>
+                    <option value="" selected disabled>
+                      -- Select Category --
+                    </option>
+                    <option value="1">Furniture</option>
+                    <option value="2">Workspace</option>
+                    <option value="3">Storage</option>
+                    <option value="4">Textile</option>
+                  </select>
+                </div>
+
+                <div class="row">
+                  <div class="col-12 col-md-6">
+                    <div class="mb-3">
+                      <label for="product-price"
+                        >Price <span class="text-danger fw-bold">*</span></label
+                      >
+                      <input
+                        type="number"
+                        min="0"
+                        class="form-control"
+                        id="product-price"
+                        placeholder="Enter product price"
+                        autocomplete="off"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="product-image"
+                    >Image <span class="text-danger fw-bold">*</span></label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="product-image"
+                    placeholder="Enter product image url"
+                    autocomplete="off"
+                    required
+                  />
+                </div>
+                <div class="row mt-5 mb-3">
+                  <div class="col-6">
+                    <a
+                      class="btn btn-lg btn-light rounded-pill w-100 p-2"
+                      href=""
+                      >Cancel</a
+                    >
+                  </div>
+                  <div class="col-6">
+                    <button
+                      class="btn btn-lg btn-primary rounded-pill w-100 p-2"
+                      type="submit"
+                      href=""
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <!-- End New Product Section -->
+
+        <!-- Category Section -->
+        <section
+          class="col-md-9 ms-sm-auto col-lg-10 px-md-4"
+          id="category-section"
+        >
+          <div
+            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+          >
+            <h1 class="display-2">Categories</h1>
+            <button class="btn btn-primary rounded-pill" id="new-category">
+              <span class="icon material-symbols-outlined">add</span>New
+              Category
+            </button>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Name</th>
+                    <th scope="col" width="50px"></th>
+                  </tr>
+                </thead>
+                <tbody id="table-category">
+                  <tr>
+                    <td scope="row">#1</td>
+                    <td class="fw-bold">Furniture</td>
+                    <td>
+                      <a href="" class="ms-3"
+                        ><span
+                          class="icon material-symbols-outlined text-danger"
+                          >delete</span
+                        ></a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row">#2</td>
+                    <td class="fw-bold">Workspace</td>
+                    <td>
+                      <a href="" class="ms-3"
+                        ><span
+                          class="icon material-symbols-outlined text-danger"
+                          >delete</span
+                        ></a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row">#3</td>
+                    <td class="fw-bold">Storage</td>
+                    <td>
+                      <a href="" class="ms-3"
+                        ><span
+                          class="icon material-symbols-outlined text-danger"
+                          >delete</span
+                        ></a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row">#4</td>
+                    <td class="fw-bold">Textile</td>
+                    <td>
+                      <a href="" class="ms-3"
+                        ><span
+                          class="icon material-symbols-outlined text-danger"
+                          >delete</span
+                        ></a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+        <!-- End Category Section -->
+
+        <!-- New Category Section -->
+        <section
+          class="col-md-9 ms-sm-auto col-lg-10 px-md-4"
+          id="new-category-section"
+        >
+          <div
+            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+          >
+            <h1 class="display-2">New Category</h1>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <form id="category-form">
+                <div class="mb-3">
+                  <label for="category-name"
+                    >Name <span class="text-danger fw-bold">*</span></label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="category-name"
+                    placeholder="Enter category name"
+                    autocomplete="off"
+                    required
+                  />
+                </div>
+                <div class="row mt-5 mb-3">
+                  <div class="col-6">
+                    <a
+                      class="btn btn-lg btn-light rounded-pill w-100 p-2"
+                      href=""
+                      >Cancel</a
+                    >
+                  </div>
+                  <div class="col-6">
+                    <button
+                      class="btn btn-lg btn-primary rounded-pill w-100 p-2"
+                      type="submit"
+                      href=""
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <!-- End New Category Section -->
+      </div>
+    </section>
+    <!-- End Home Section -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

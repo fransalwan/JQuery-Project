@@ -1,0 +1,26 @@
+[
+  {
+    "username": "fransalwan",
+    "email": "frans@gmail.com",
+    "password": "123456",
+    "phoneNumber": "8193578017",
+    "address": "bsd",
+    "role": "admin"
+  },
+  {
+    "username": "fransalwan1",
+    "email": "frans1@gmail.com",
+    "password": "123456",
+    "phoneNumber": "8193578017",
+    "address": "bsd",
+    "role": "admin"
+  },
+  {
+    "username": "fransalwan2",
+    "email": "fransalwan2@gmail.com",
+    "password": "123456",
+    "phoneNumber": "8193578017",
+    "address": "bsd",
+    "role": "Staff"
+  }
+]

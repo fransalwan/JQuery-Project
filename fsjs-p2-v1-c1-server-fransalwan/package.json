@@ -1,0 +1,37 @@
+{
+  "name": "fsjs-p2-v1-c1-server-fransalwan",
+  "version": "1.0.0",
+  "description": "[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=11436158&assignment_repo_type=AssignmentRepo)\r # p2-cms-integration-server\r CMS Integration - Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/H8-P2-S1/fsjs-p2-v1-c1-server-fransalwan.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/H8-P2-S1/fsjs-p2-v1-c1-server-fransalwan/issues"
+  },
+  "homepage": "https://github.com/H8-P2-S1/fsjs-p2-v1-c1-server-fransalwan#readme",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "bcryptjs": "^2.4.3",
+    "express": "^4.18.2",
+    "google-auth-library": "^8.9.0",
+    "jest": "^29.6.1",
+    "jsonwebtoken": "^9.0.1",
+    "pg": "^8.11.1",
+    "sequelize": "^6.32.1",
+    "supertest": "^6.3.3"
+  },
+  "devDependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "nodemon": "^3.0.1",
+    "sequelize-cli": "^6.6.1"
+  }
+}

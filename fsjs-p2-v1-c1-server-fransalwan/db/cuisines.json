@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Sayur Pare",
+    "description": "Enak........",
+    "price": 2000,
+    "imgUrl": "https://th.bing.com/th/id/OIP.1MbY8nXojoYh3-o79ym5yAHaFj?w=206&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7",
+    "authorId": 1,
+    "categoryId": 1
+  },
+  {
+    "name": "Ayam",
+    "description": "Mantapssss",
+    "price": 6000,
+    "imgUrl": "https://th.bing.com/th/id/OIP.SKKLqQ9BOix3Uhgh1aIRTwHaFP?w=265&h=188&c=7&r=0&o=5&dpr=1.4&pid=1.7",
+    "authorId": 1,
+    "categoryId": 2
+  },
+  {
+    "name": "Bayam",
+    "description": "Enak........",
+    "price": 2000,
+    "imgUrl": "https://th.bing.com/th/id/OIP.7D_HtOT_9f9WOtVba8rF7QHaHa?w=166&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7",
+    "authorId": 1,
+    "categoryId": 1
+  },
+  {
+    "name": "Tempe",
+    "description": "Mantapssss",
+    "price": 6000,
+    "imgUrl": "https://th.bing.com/th/id/OIP.uWvQUc82zyDAPUAqsYeK9QHaE8?w=288&h=192&c=7&r=0&o=5&dpr=1.4&pid=1.7",
+    "authorId": 1,
+    "categoryId": 2
+  },
+  {
+    "name": "Tahu",
+    "description": "Mantapssss",
+    "price": 6000,
+    "imgUrl": "https://th.bing.com/th/id/OIP.1MbY8nXojoYh3-o79ym5yAHaFj?w=206&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7",
+    "authorId": 1,
+    "categoryId": 2
+  }
+]

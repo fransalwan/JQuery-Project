@@ -1,0 +1,23 @@
+{
+  "name": "fsjs-p2-v1-c1-client-fransalwan",
+  "version": "1.0.0",
+  "description": "[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=11445153&assignment_repo_type=AssignmentRepo)\r # fsjs-p2-v1-c1-client\r CMS Integration - Client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/H8-P2-S1/fsjs-p2-v1-c1-client-fransalwan.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/H8-P2-S1/fsjs-p2-v1-c1-client-fransalwan/issues"
+  },
+  "homepage": "https://github.com/H8-P2-S1/fsjs-p2-v1-c1-client-fransalwan#readme",
+  "devDependencies": {
+    "vite": "^4.4.3"
+  }
+}
